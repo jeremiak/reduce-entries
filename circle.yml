@@ -1,6 +1,10 @@
+dependencies:
+  pre:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
 deployment:
   release:
     tag: /v[0-9]+(\.[0-9]+)*/
     owner: jeremiak
     commands:
-      - echo "push to npm"
+      - npm publish
