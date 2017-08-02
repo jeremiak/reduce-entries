@@ -1,14 +1,14 @@
 {
-  "name": "reduce-entities",
-  "version": "1.0.0",
+  "name": "reduce-entries",
+  "version": "0.0.1",
   "description": "Reduce array of objects into a single object",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
     "build": "babel index.js -o bundle.js",
     "prepublish": "npm run build",
     "test": "babel-node test.js"
   },
-  "keywords": ["reduce", "entities", "array"],
+  "keywords": ["reduce", "entries", "array"],
   "author": "jeremiak",
   "license": "CC BY 4.0",
   "devDependencies": {
