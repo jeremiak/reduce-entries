@@ -1,4 +1,4 @@
-const reduceEntities = (valueKey = 'value') => (accum, next, i, total) => {
+const reduceEntries = (valueKey = 'value') => (accum, next, i, total) => {
   const initialMissing = i === 1 && accum === total[0]
   return Object.assign(
     {},
@@ -9,4 +9,4 @@ const reduceEntities = (valueKey = 'value') => (accum, next, i, total) => {
   )
 }
 
-module.exports = reduceEntities
+module.exports = reduceEntries
