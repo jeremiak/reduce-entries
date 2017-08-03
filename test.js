@@ -3,7 +3,7 @@ const fn = require('./index')
 
 test('function returns a function', t => {
   t.plan(1)
-  t.equal(typeof fn, 'function')
+  t.equal(typeof fn(), 'function')
 })
 
 test('converts array to object', t => {
