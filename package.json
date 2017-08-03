@@ -1,6 +1,6 @@
 {
   "name": "reduce-entries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Reduce array of objects into a single object",
   "repository": "https://github.com/jeremiak/reduce-entries",
   "bugs": "https://github.com/jeremiak/reduce-entries/issues",
@@ -8,7 +8,8 @@
   "scripts": {
     "build": "babel index.js -o bundle.js",
     "prepublish": "npm run build",
-    "test": "babel-node test.js"
+    "test": "babel-node test.js",
+    "watch": "babel-watch test.js"
   },
   "keywords": ["reduce", "entries", "array"],
   "author": "jeremiak",
@@ -17,6 +18,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^2.0.7",
     "tape": "^4.8.0"
   },
   "babel": {
