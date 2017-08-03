@@ -1,6 +1,6 @@
 {
   "name": "reduce-entries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Reduce array of objects into a single object",
   "repository": "https://github.com/jeremiak/reduce-entries",
   "bugs": "https://github.com/jeremiak/reduce-entries/issues",
