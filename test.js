@@ -14,6 +14,14 @@ test('converts array to object', t => {
   t.equal(actual.yo, 'dude')
 })
 
+test('converts array to object if initial object is missing', t => {
+  t.plan(2)
+  const a = [{ key: 'foo', value: 'bar' }, { key: 'yo', value: 'dude' }]
+  const actual = a.reduce(fn())
+  t.equal(actual.foo, 'bar')
+  t.equal(actual.yo, 'dude')
+})
+
 test('converts array to object using value key', t => {
   t.plan(2)
   const a = [{ key: 'foo', baz: 'bar' }, { key: 'yo', baz: 'dude' }]
@@ -22,10 +30,10 @@ test('converts array to object using value key', t => {
   t.equal(actual.yo, 'dude')
 })
 
-test('converts array to object if initial object is missing', t => {
+test('converts array to object using value key if initial object is missing', t => {
   t.plan(2)
-  const a = [{ key: 'foo', value: 'bar' }, { key: 'yo', value: 'dude' }]
-  const actual = a.reduce(fn())
-  t.equal(actual.foo, 'bar')
+  const a = [{ key: 'foo', bar: 'baz!!' }, { key: 'yo', bar: 'dude' }]
+  const actual = a.reduce(fn('bar'))
+  t.equal(actual.foo, 'baz!!')
   t.equal(actual.yo, 'dude')
 })
